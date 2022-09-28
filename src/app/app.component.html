@@ -23,4 +23,28 @@
     <button (click)="onSubmit()" type="submit">Submit</button>
   </p>
 </form>
+<h1>Reactive Form Example</h1>
+<form [formGroup]="reactiveContactForm">
+  <p>
+    <label for="firstname">First Name </label>
+    <input
+      type="text"
+      id="firstname"
+      name="firstname"
+      formControlName="firstname"
+    />
+  </p>
+  <p>
+    <label for="firstname">last Name </label>
+    <input
+      type="text"
+      id="firstname"
+      name="firstname"
+      formControlName="lastname"
+    />
+  </p>
+  <p>
+    <button (click)="onReactiveFormSubmit()" type="submit">Submit</button>
+  </p>
+</form>
 <app-child-component [details]="details"></app-child-component>
