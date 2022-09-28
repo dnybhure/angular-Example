@@ -1,4 +1,26 @@
 <hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+
+<form #contactForm="ngForm">
+  <p>
+    <label for="firstname">First Name </label>
+    <input
+      type="text"
+      id="firstname"
+      name="firstName"
+      [(ngModel)]="contact.firstname"
+    />
+  </p>
+  <p>
+    <label for="firstname">last Name </label>
+    <input
+      type="text"
+      id="lastname"
+      name="lastName"
+      [(ngModel)]="contact.lastname"
+    />
+  </p>
+  <p>
+    <button (click)="onSubmit()" type="submit">Submit</button>
+  </p>
+</form>
+<app-child-component [details]="details"></app-child-component>
